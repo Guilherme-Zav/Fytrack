@@ -66,7 +66,7 @@ export default async function ResumoPage({ searchParams }: { searchParams: Promi
               )}
             </div>
             <p className="mt-1 text-sm text-white/75">Margem de {percent(s.margin)} sobre o faturamento líquido</p>
-            <div className="mt-auto grid grid-cols-3 gap-3 border-t border-white/15 pt-4">
+            <div className="mt-auto flex flex-wrap gap-x-6 gap-y-3 border-t border-white/15 pt-4">
               {[
                 ["Faturamento líquido", money(s.netRevenue)],
                 ["Gastos com anúncios", money(s.adSpend)],
@@ -74,7 +74,7 @@ export default async function ResumoPage({ searchParams }: { searchParams: Promi
               ].map(([l, v]) => (
                 <div key={l} className="min-w-0">
                   <p className="truncate text-xs text-white/70">{l}</p>
-                  <p className="truncate text-[14px] font-semibold tabular sm:text-[17px]">{v}</p>
+                  <p className="whitespace-nowrap text-[14px] font-semibold tabular 2xl:text-[17px]">{v}</p>
                 </div>
               ))}
             </div>
